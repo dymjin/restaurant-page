@@ -59,11 +59,14 @@
      user-select: none;
      font-weight: 500;
      font-size: 1.5rem;
-     text-shadow: 10px 10px 10px black;
+     background-color: rgb(0, 0, 0);
+     border-radius: 2rem;
+     padding: 0.5rem 1rem;
  }
 
  .tabs>div:hover {
-     color: rgb(255, 60, 0);
+     color: rgb(0, 0, 0);
+     background-color: rgb(255, 255, 255);
  }
 
  .main-img {
@@ -77,13 +80,21 @@
  .footer {
      display: flex;
      justify-content: center;
-     background-color: #0000007c;
      gap: 2rem;
+     box-shadow: 0px -5px 15px rgb(0, 0, 0);
+     background-color: #000000;
      color: white;
      padding: 1rem 0;
      width: 100%;
+     position: fixed;
+     bottom: 0;
  }
 
  .footer>div>a {
-     color: aqua;
+     color: rgb(255, 145, 0);
+     text-decoration: none;
+ }
+
+ .footer>div>a:hover {
+     color: rgb(255, 94, 0);
  }
