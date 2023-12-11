@@ -1,13 +1,89 @@
-*,
-html,
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+ *,
+ html,
+ body {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
 
-#content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+ html {
+     background: center / cover no-repeat fixed url(../imgs/wood_wall.jpg);
+     font-family: 'Playfair Display', serif;
+ }
+
+ #contentBox {
+     color: white;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ #content {
+     margin: 2rem 0;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     gap: 2rem;
+ }
+
+ .header {
+     display: flex;
+     flex-direction: column;
+     color: white;
+     align-items: center;
+     user-select: none;
+ }
+
+ .main-logo {
+     font-size: 4.5rem;
+     font-weight: 600;
+     text-shadow: 10px 10px 10px black;
+ }
+
+ .wood-oven {
+     width: 6rem;
+     height: auto;
+     filter: drop-shadow(10px 10px 5px rgb(0, 0, 0));
+ }
+
+ .tabs {
+     color: white;
+     display: flex;
+     gap: 2rem;
+     width: fit-content;
+     align-self: center;
+ }
+
+ .tabs>div {
+     cursor: pointer;
+     user-select: none;
+     font-weight: 500;
+     font-size: 1.5rem;
+     text-shadow: 10px 10px 10px black;
+ }
+
+ .tabs>div:hover {
+     color: rgb(255, 60, 0);
+ }
+
+ .main-img {
+     width: 1000px;
+     height: auto;
+     border-radius: 20px;
+     border: 10px ridge rgb(255, 196, 0);
+     user-select: none;
+ }
+
+ .footer {
+     display: flex;
+     justify-content: center;
+     background-color: #0000007c;
+     gap: 2rem;
+     color: white;
+     padding: 1rem 0;
+     width: 100%;
+ }
+
+ .footer>div>a {
+     color: aqua;
+ }
