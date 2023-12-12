@@ -14,7 +14,7 @@ body {
 
 html {
     background: center / cover no-repeat fixed url(../imgs/wood_wall.jpg);
-    font-family: 'Playfair Display', serif;
+    font-family: 'Rethink Sans', sans-serif;
 }
 
 #contentBox {
@@ -24,6 +24,15 @@ html {
     align-items: center;
 }
 
+/* .main-img {
+    width: 1000px;
+    height: auto;
+    border-radius: 20px;
+    border: 10px ridge rgb(255, 196, 0);
+    user-select: none;
+} */
+
+/* main page start*/
 #content {
     margin: 3rem 0;
     flex: 1;
@@ -36,10 +45,15 @@ html {
     gap: 2rem;
 }
 
+.header,
+.title {
+    font-family: 'Playfair Display', serif;
+    color: white;
+}
+
 .header {
     display: flex;
     flex-direction: column;
-    color: white;
     align-items: center;
     user-select: none;
 }
@@ -88,34 +102,33 @@ html {
     color: white;
 }
 
+/* home tab start */
 .p-wrapper {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    font-size: 1.5rem;
     width: 60vw;
 }
 
-.p-wrapper > div {
+.p-item {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.p-item>.title {
+    font-size: 2rem;
+    font-weight: 300;
     text-align: center;
-    text-shadow: 10px 10px 10px black;
-    font-size: 1.7rem;
-    font-weight: 500;
 }
 
 .p-main {
-    background-color: rgba(0, 0, 0, 0.699);
-    padding: 2rem;
-    border-radius: 1rem;
+    font-size: 1.2rem;
 }
 
-.main-img {
-    width: 1000px;
-    height: auto;
-    border-radius: 20px;
-    border: 10px ridge rgb(255, 196, 0);
-    user-select: none;
-}
+/* home tab end */
 
 .footer {
     flex: 0;
@@ -140,3 +153,61 @@ html {
 .link-wrapper>div>a:hover {
     color: rgb(255, 94, 0);
 }
+
+/* main page end */
+
+/* menu tab start */
+
+.menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    /* width: 60vw; */
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: black;
+    color: white;
+    padding: 2rem;
+}
+
+.menu-img-1 {
+    width: 700px;
+    height: auto;
+}
+
+.menu-img-2 {
+    width: 700px;
+    height: auto;
+}
+
+.menu-img-3 {
+    width: 700px;
+    height: auto;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 1rem;
+    width: 600px;
+}
+
+.text-wrapper>.title {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.text-wrapper>div:nth-child(2) {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: rgb(226, 226, 226);
+}
+
+/* menu tab end */
