@@ -15,6 +15,7 @@ function home() {
     p_wrapper.appendChild(p_main_1);
     p_wrapper.appendChild(p_main_2);
     contentBox.appendChild(p_wrapper);
+    const homeTab = document.querySelector('.tabs>div:nth-child(1)');
 }
 
 export { home as addHome };

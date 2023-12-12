@@ -38,5 +38,4 @@ const pageLoad = () => {
     barrel.addHome();
 };
 
-
 export { pageLoad }

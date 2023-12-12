@@ -79,6 +79,15 @@ html {
     background-color: rgb(255, 255, 255);
 }
 
+.tabs>div.selected-tab {
+    background: linear-gradient(0deg, rgba(255, 218, 0, 1) -30%, rgba(255, 0, 0, 1) 120%);
+    color: black;
+}
+
+.tabs>div.selected-tab:hover {
+    color: white;
+}
+
 .p-wrapper {
     display: flex;
     flex-direction: column;
