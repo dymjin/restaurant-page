@@ -22,6 +22,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 /* .main-img {
@@ -157,7 +158,6 @@ html {
 /* main page end */
 
 /* menu tab start */
-
 .menu-wrapper {
     display: flex;
     flex-direction: column;
@@ -211,3 +211,112 @@ html {
 }
 
 /* menu tab end */
+
+/* contact tab start */
+.contact-wrapper {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.contact-form-wrapper>.title {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.contact-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.contact-form>p {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+.contact-form>p>div {
+    grid-column: span 2;
+    justify-self: end;
+}
+
+.contact-form>p>label {
+    align-self: center;
+}
+
+.contact-form>p:nth-child(3)>label {
+    align-self: start;
+    margin-top: 0.6rem;
+}
+
+.contact-form>p>input,
+.contact-form>p>textarea {
+    background-color: rgb(0, 0, 0);
+    border: 2px solid white;
+    padding: 0.6rem;
+    font-family: 'Rethink Sans', sans-serif;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.contact-form>p>textarea {
+    resize: vertical;
+}
+
+.contact-form>p>input:focus,
+.contact-form>p>textarea:focus {
+    outline: none;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+.contact-form>p>:invalid {
+    border: 2px solid red;
+}
+
+.contact-form>p>:invalid:focus {
+    background-color: #ffc7c7;
+}
+
+.contact-form>button {
+    align-self: end;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    color: white;
+    border: 2px solid white;
+    background-color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: 'Rethink Sans', sans-serif;
+}
+
+.contact-form>button:hover {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+label[for="email"]::after,
+label[for="message"]::after {
+    color: red;
+    content: " *";
+}
+
+/* .contact-form>p>label {
+    grid-area: label;
+} */
+
+/* contact tab end */
