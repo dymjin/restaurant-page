@@ -2,6 +2,7 @@ function contact() {
     const contactWrapper = document.createElement('div');
     contactWrapper.classList.add('contact-wrapper');
 
+    // contact form start
     const contact_form_wrapper = document.createElement('div');
     contact_form_wrapper.classList.add('contact-form-wrapper');
 
@@ -78,7 +79,9 @@ function contact() {
     contact_form.appendChild(submit_btn);
     contact_form_wrapper.appendChild(contact_form_title);
     contact_form_wrapper.appendChild(contact_form);
+    // contact form end
 
+    //contact social start
     const contact_socials_wrapper = document.createElement('div');
     contact_socials_wrapper.classList.add('contact-socials-wrapper');
     const contact_socials_title = document.createElement('div');
@@ -116,11 +119,36 @@ function contact() {
     contact_socials_icons.appendChild(tiktok_icon);
     contact_socials_icons.appendChild(whatsapp_icon);
     contact_socials_icons.appendChild(pinterest_icon);
-
     contact_socials_wrapper.appendChild(contact_socials_icons);
+    // contact social end
+
+    //contact map start
+    const contact_map_wrapper = document.createElement('div');
+    contact_map_wrapper.classList.add('contact-map-wrapper');
+    const contact_map_title = document.createElement('div');
+    contact_map_title.classList.add('title');
+    contact_map_title.textContent = "Find us here";
+    const contact_map_p = document.createElement('p');
+    contact_map_p.textContent = "Realtown, Real Place, Real Country, Enjoy your stay!";
+    const map_wrapper = document.createElement('div');
+    map_wrapper.classList.add('google-map');
+    const map = document.createElement('iframe');
+    map.setAttribute('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13885.412473399574!2d23.624500155194262!3d-29.535209152939952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e83316e5d831069%3A0xb0243a8901ad895b!2sLeeuberg!5e0!3m2!1sen!2sza!4v1702560066857!5m2!1sen!2sza');
+    map.classList.add('contact-map');
+    map.setAttribute('width', 200);
+    map.setAttribute('heigth', 450);
+    map.setAttribute('allowfullscreen', '');
+    map.setAttribute('loading', 'lazy');
+    map.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+    map_wrapper.appendChild(map);
+    contact_map_wrapper.appendChild(contact_map_title);
+    contact_map_wrapper.appendChild(contact_map_p);
+    contact_map_wrapper.appendChild(map_wrapper);
+    // contact map end
 
     contactWrapper.appendChild(contact_form_wrapper);
     contactWrapper.appendChild(contact_socials_wrapper);
+    contactWrapper.appendChild(contact_map_wrapper);
 
     const contentBox = document.getElementById('contentBox');
     contentBox.appendChild(contactWrapper);

@@ -358,8 +358,42 @@ label[for="message"]::after {
 
 /* contact social end */
 
-/* .contact-form>p>label {
-    grid-area: label;
-} */
+/* contact map start */
+
+.contact-map-wrapper {
+    background-color: black;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-map-wrapper>div.title {
+    font-size: 2rem;
+    font-weight: 500;
+    align-self: center;
+}
+
+.contact-map-wrapper>p {
+    font-size: 1.2rem;
+    color: rgb(226, 226, 226);
+    font-weight: 300;
+    align-self: center;
+}
+
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+/* contact map end */
 
 /* contact tab end */
