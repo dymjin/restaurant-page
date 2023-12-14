@@ -79,9 +79,48 @@ function contact() {
     contact_form_wrapper.appendChild(contact_form_title);
     contact_form_wrapper.appendChild(contact_form);
 
+    const contact_socials_wrapper = document.createElement('div');
+    contact_socials_wrapper.classList.add('contact-socials-wrapper');
+    const contact_socials_title = document.createElement('div');
+    contact_socials_title.classList.add('title');
+    contact_socials_title.textContent = "Stay in touch with us";
+    const contact_socials_icons = document.createElement('div');
+    contact_socials_icons.classList.add('contact-socials-icons');
+    const instagram_icon = document.createElement('span');
+    instagram_icon.classList.add('fa-brands');
+    instagram_icon.classList.add('fa-instagram');
+    const facebook_icon = document.createElement('span');
+    facebook_icon.classList.add('fa-brands');
+    facebook_icon.classList.add('fa-facebook');
+    const snapchat_icon = document.createElement('span');
+    snapchat_icon.classList.add('fa-brands');
+    snapchat_icon.classList.add('fa-snapchat');
+    const twitter_icon = document.createElement('span');
+    twitter_icon.classList.add('fa-brands');
+    twitter_icon.classList.add('fa-twitter');
+    const tiktok_icon = document.createElement('span');
+    tiktok_icon.classList.add('fa-brands');
+    tiktok_icon.classList.add('fa-tiktok');
+    const whatsapp_icon = document.createElement('span');
+    whatsapp_icon.classList.add('fa-brands');
+    whatsapp_icon.classList.add('fa-whatsapp');
+    const pinterest_icon = document.createElement('span');
+    pinterest_icon.classList.add('fa-brands');
+    pinterest_icon.classList.add('fa-pinterest');
 
+    contact_socials_wrapper.appendChild(contact_socials_title);
+    contact_socials_icons.appendChild(instagram_icon);
+    contact_socials_icons.appendChild(facebook_icon);
+    contact_socials_icons.appendChild(snapchat_icon);
+    contact_socials_icons.appendChild(twitter_icon);
+    contact_socials_icons.appendChild(tiktok_icon);
+    contact_socials_icons.appendChild(whatsapp_icon);
+    contact_socials_icons.appendChild(pinterest_icon);
+
+    contact_socials_wrapper.appendChild(contact_socials_icons);
 
     contactWrapper.appendChild(contact_form_wrapper);
+    contactWrapper.appendChild(contact_socials_wrapper);
 
     const contentBox = document.getElementById('contentBox');
     contentBox.appendChild(contactWrapper);
