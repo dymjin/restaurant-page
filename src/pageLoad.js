@@ -1,6 +1,6 @@
 import './styles.css';
 import * as barrel from './barrel';
-import icon from '../src/wood_oven_final.svg';
+import { icon } from './index';
 
 const pageLoad = () => {
     const content = document.getElementById("content");

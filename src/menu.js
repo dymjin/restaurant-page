@@ -1,6 +1,6 @@
-import img1 from '../src/steak_img.jpg';
-import img2 from '../src/gnocchi_pasta.jpg';
-import img3 from '../src/lamb_kebab.jpg';
+import { img1 } from "./index";
+import { img2 } from "./index";
+import { img3 } from "./index";
 
 function menu() {
     const menuWrapper = document.createElement('div');

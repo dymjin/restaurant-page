@@ -1,5 +1,8 @@
 import { pageLoad, barrel } from "./pageLoad";
-
+import icon from '../src/wood_oven_final.svg';
+import img1 from '../src/steak_img.jpg';
+import img2 from '../src/gnocchi_pasta.jpg';
+import img3 from '../src/lamb_kebab.jpg';
 
 const funcList = [barrel.addHome, barrel.addMenu, barrel.addContact];
 pageLoad();
@@ -22,3 +25,5 @@ tabs.forEach((tab, index) => {
     tabs[1].textContent = "Menu";
     tabs[2].textContent = "Contact";
 });
+
+export { icon, img1, img2, img3 }
