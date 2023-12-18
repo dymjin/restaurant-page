@@ -1,5 +1,6 @@
 import { pageLoad, barrel } from "./pageLoad";
 
+
 const funcList = [barrel.addHome, barrel.addMenu, barrel.addContact];
 pageLoad();
 

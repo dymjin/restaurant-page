@@ -1,5 +1,6 @@
 import './styles.css';
 import * as barrel from './barrel';
+import icon from '../src/wood_oven_final.svg';
 
 const pageLoad = () => {
     const content = document.getElementById("content");
@@ -13,8 +14,8 @@ const pageLoad = () => {
 
     mainLogo.textContent = "Queen's Cottage";
     mainLogo.classList.add('main-logo');
-    const woodOven = document.createElement('img');
-    woodOven.setAttribute('src', '../src/wood_oven_final.svg');
+    const woodOven = new Image();
+    woodOven.src = icon;
     woodOven.classList.add('wood-oven');
     header.appendChild(woodOven);
     header.appendChild(mainLogo);
