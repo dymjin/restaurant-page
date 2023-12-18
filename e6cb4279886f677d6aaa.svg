@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="417.46878"
+   height="321.14331"
+   viewBox="0 0 110.45528 84.96917"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <pattern
+       xlink:href="#Bricks"
+       id="pattern6"
+       patternTransform="scale(0.25)"
+       x="0"
+       y="-6"
+       preserveAspectRatio="none" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="100"
+       height="100"
+       id="Bricks"
+       style="fill:#ffffff"
+       patternTransform="scale(0.25,0.25)">
+      <g
+         id="g13367">
+        <rect
+           style="fill:none;stroke:none;stroke-width:0"
+           id="rect13349"
+           width="100"
+           height="100"
+           x="0"
+           y="0" />
+        <rect
+           style="fill-opacity:1;stroke-width:0"
+           id="rect13351"
+           width="40"
+           height="40"
+           x="0"
+           y="60" />
+        <rect
+           style="fill-opacity:1;stroke-width:0"
+           id="rect13353"
+           width="90"
+           height="40"
+           x="0"
+           y="10" />
+        <rect
+           style="fill-opacity:1;stroke-width:0"
+           id="rect13355"
+           width="50"
+           height="40"
+           x="50"
+           y="60" />
+      </g>
+    </pattern>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-10.918195,-31.91743)">
+    <path
+       id="rect1"
+       style="fill:none;stroke:#ffffff;stroke-width:5.29167;stroke-dasharray:none;stroke-opacity:1"
+       d="M 66.145574,34.563265 A 52.581524,52.581524 0 0 0 13.564287,87.145069 H 66.145574 118.72738 A 52.581524,52.581524 0 0 0 66.145574,34.563265 Z" />
+    <path
+       id="path169"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2.646;stroke-dasharray:none;stroke-opacity:1"
+       d="m 66.14583,42.530655 -11.63039,20.14487 -3.22047,-5.57779 c -1.90963,2.89826 -2.929469,6.291973 -2.933804,9.762792 -2.3e-5,9.822202 7.962464,17.784691 17.784664,17.784669 9.82221,2.2e-5 17.78469,-7.962467 17.78467,-17.784669 -10e-4,-3.473298 -1.01898,-6.870301 -2.92835,-9.771702 l -3.22563,5.586989 z m 0,8.54866 8.38379,14.521692 2.32516,-4.027307 c 1.37636,2.09145 2.11033,4.540128 2.11088,7.043839 2e-5,7.080262 -5.73956,12.819835 -12.81983,12.819824 -7.08026,1.1e-5 -12.82013,-5.739562 -12.82011,-12.819824 0.003,-2.501921 0.73836,-4.948331 2.1149,-7.037525 l 2.32143,4.020704 z" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:5.29167;stroke-dasharray:none;stroke-opacity:1"
+       id="rect174"
+       width="110.45476"
+       height="21.804029"
+       x="10.918454"
+       y="95.082565" />
+    <path
+       id="rect2"
+       style="fill:url(#pattern6);fill-opacity:1;stroke:#ffffff;stroke-width:5.29167;stroke-dasharray:none;stroke-opacity:1"
+       d="M 13.56403,87.145068 V 109.40728 H 66.145833 118.72764 V 87.145068 H 66.145833 Z" />
+  </g>
+</svg>
