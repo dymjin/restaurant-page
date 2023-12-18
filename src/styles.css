@@ -1,3 +1,12 @@
+:root {
+    --main-color: black;
+    --accent-color: rgb(226, 226, 226);
+    --p-text: 1.2rem;
+    --p-text-weight: 400;
+    --p-title-color: white;
+    --secondary-color: white;
+}
+
 *,
 html,
 body {
@@ -18,24 +27,54 @@ html {
 }
 
 #contentBox {
-    color: white;
+    color: var(--secondary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-/* .main-img {
-    width: 1000px;
-    height: auto;
-    border-radius: 20px;
-    border: 10px ridge rgb(255, 196, 0);
-    user-select: none;
-} */
+/* footer start */
+.footer {
+    flex: 0;
+    box-shadow: 0px -5px 15px var(--main-color);
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.link-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.link-wrapper>div>a {
+    color: rgb(255, 145, 0);
+    text-decoration: none;
+}
+
+.link-wrapper>div>a:hover {
+    color: rgb(255, 94, 0);
+}
+
+.authors {
+    display: flex;
+    flex-direction: column;
+}
+
+.credits {
+    text-align: end;
+}
+
+/* footer end */
 
 /* main page start*/
 #content {
-    margin: 3rem 0;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
     flex: 1;
 }
 
@@ -43,13 +82,19 @@ html {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .header,
 .title {
     font-family: 'Playfair Display', serif;
-    color: white;
+    color: var(--secondary-color);
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
 }
 
 .header {
@@ -57,6 +102,7 @@ html {
     flex-direction: column;
     align-items: center;
     user-select: none;
+    min-width: 600px;
 }
 
 .main-logo {
@@ -72,7 +118,7 @@ html {
 }
 
 .tabs {
-    color: white;
+    color: var(--secondary-color);
     display: flex;
     gap: 2rem;
     width: fit-content;
@@ -84,23 +130,23 @@ html {
     user-select: none;
     font-weight: 600;
     font-size: 1.1rem;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--main-color);
     border-radius: 2rem;
     padding: 0.5rem 1rem;
 }
 
 .tabs>div:hover {
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
+    color: var(--main-color);
+    background-color: var(--secondary-color);
 }
 
 .tabs>div.selected-tab {
     background: linear-gradient(0deg, rgba(255, 218, 0, 1) -30%, rgba(255, 0, 0, 1) 120%);
-    color: black;
+    color: var(--main-color);
 }
 
 .tabs>div.selected-tab:hover {
-    color: white;
+    color: var(--secondary-color);
 }
 
 /* home tab start */
@@ -108,52 +154,24 @@ html {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 60vw;
+    width: clamp(700px, 60vw, 60vw);
 }
 
 .p-item {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: var(--main-color);
     padding: 2rem;
     gap: 1rem;
-}
-
-.p-item>.title {
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: center;
+    border-radius: 1rem;
 }
 
 .p-main {
-    font-size: 1.2rem;
+    font-size: var(--p-text);
+    color: var(--accent-color);
 }
 
 /* home tab end */
-
-.footer {
-    flex: 0;
-    box-shadow: 0px -5px 15px rgb(0, 0, 0);
-    background-color: #000000;
-    color: white;
-    padding: 1rem 0;
-    width: 100%;
-}
-
-.link-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.link-wrapper>div>a {
-    color: rgb(255, 145, 0);
-    text-decoration: none;
-}
-
-.link-wrapper>div>a:hover {
-    color: rgb(255, 94, 0);
-}
 
 /* main page end */
 
@@ -162,7 +180,7 @@ html {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    /* width: 60vw; */
+    width: 100%;
 }
 
 .menu-item {
@@ -171,15 +189,15 @@ html {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    background-color: black;
-    color: white;
-    padding: 2rem;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    padding: 2rem 0;
 }
 
 .menu-img {
-    width: 700px;
+    width: clamp(500px, 700px, 50%);
     height: auto;
-    
+    border-radius: 1rem;
 }
 
 .text-wrapper {
@@ -187,18 +205,13 @@ html {
     flex-direction: column;
     text-align: justify;
     gap: 1rem;
-    width: 600px;
-}
-
-.text-wrapper>.title {
-    font-weight: 500;
-    font-size: 2rem;
+    width: clamp(500px, 600px, 50%);
 }
 
 .text-wrapper>div:nth-child(2) {
     font-size: 1.2rem;
     font-weight: 300;
-    color: rgb(226, 226, 226);
+    color: var(--accent-color);
 }
 
 /* menu tab end */
@@ -214,14 +227,9 @@ html {
 /* contact form start */
 
 .contact-form-wrapper {
-    background-color: black;
+    background-color: var(--main-color);
     padding: 2rem 0;
     width: 100%;
-}
-
-.contact-form-wrapper>.title {
-    font-size: 2rem;
-    font-weight: 500;
 }
 
 .contact-form-wrapper {
@@ -235,8 +243,8 @@ html {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-size: var(--p-text);
+    font-weight: var(--p-text-weight);
 }
 
 .contact-form>p {
@@ -260,11 +268,11 @@ html {
 
 .contact-form>p>input,
 .contact-form>p>textarea {
-    background-color: rgb(0, 0, 0);
-    border: 2px solid white;
+    background-color: var(--main-color);
+    border: 2px solid var(--secondary-color);
     padding: 0.6rem;
     font-family: 'Rethink Sans', sans-serif;
-    color: white;
+    color: var(--secondary-color);
     font-size: 1rem;
     font-weight: 500;
 }
@@ -276,9 +284,9 @@ html {
 .contact-form>p>input:focus,
 .contact-form>p>textarea:focus {
     outline: none;
-    background-color: white;
-    border: 2px solid black;
-    color: black;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
 }
 
 .contact-form>p>:invalid {
@@ -293,18 +301,18 @@ html {
     align-self: end;
     padding: 0.5rem 1.5rem;
     border: none;
-    color: white;
-    border: 2px solid white;
-    background-color: rgb(0, 0, 0);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    background-color: var(--main-color);
     font-weight: 600;
     font-size: 1rem;
     font-family: 'Rethink Sans', sans-serif;
 }
 
 .contact-form>button:hover {
-    border: 2px solid rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    border: 2px solid var(--main-color);
+    background-color: var(--secondary-color);
+    color: var(--main-color);
 }
 
 label[for="email"]::after,
@@ -318,7 +326,7 @@ label[for="message"]::after {
 /* contact social start */
 
 .contact-socials-wrapper {
-    background-color: black;
+    background-color: var(--main-color);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -326,11 +334,6 @@ label[for="message"]::after {
     align-items: center;
     gap: 3rem;
 
-}
-
-.contact-socials-wrapper>div.title {
-    font-size: 2rem;
-    font-weight: 500;
 }
 
 .contact-socials-icons {
@@ -352,23 +355,17 @@ label[for="message"]::after {
 /* contact map start */
 
 .contact-map-wrapper {
-    background-color: black;
+    background-color: var(--main-color);
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.contact-map-wrapper>div.title {
-    font-size: 2rem;
-    font-weight: 500;
-    align-self: center;
-}
-
 .contact-map-wrapper>p {
-    font-size: 1.2rem;
-    color: rgb(226, 226, 226);
-    font-weight: 300;
+    font-size: var(--p-text);
+    font-weight: var(--p-text-weight);
+    color: var(--accent-color);
     align-self: center;
 }
 
