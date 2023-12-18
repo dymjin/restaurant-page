@@ -22,7 +22,7 @@ function contact() {
     input_1.setAttribute("type", "text");
     input_1.setAttribute("id", "name");
     input_1.setAttribute("name", "username");
-    input_1.setAttribute('pattern', '[a-zA-Z]{3,16}');
+    input_1.setAttribute('pattern', '[a-zA-Z]{2,30}');
     input_1.toggleAttribute("autofocus", true);
 
     const contact_form_p_2 = document.createElement('p');
