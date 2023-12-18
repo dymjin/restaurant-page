@@ -22,20 +22,16 @@ const pageLoad = () => {
     const tabs = document.createElement('div');
     tabs.classList.add('tabs');
     const home = document.createElement('div');
-    tabs.appendChild(home);
     const menu = document.createElement('div');
-    tabs.appendChild(menu);
     const contact = document.createElement('div');
-    tabs.appendChild(contact);
-
+    [home, menu, contact].forEach(tab => tabs.appendChild(tab));
     const contentBox = document.createElement('div');
     contentBox.setAttribute("id", "contentBox");
 
-    contentWrapper.appendChild(header);
-    contentWrapper.appendChild(tabs);
-    contentWrapper.appendChild(contentBox);
+    [header, tabs, contentBox].forEach(item => contentWrapper.appendChild(item));
     content.appendChild(contentWrapper);
+
     barrel.addHome();
 };
 
-export { pageLoad }
+export { pageLoad, barrel }

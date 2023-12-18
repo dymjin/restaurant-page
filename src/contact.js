@@ -24,8 +24,6 @@ function contact() {
     input_1.setAttribute("name", "username");
     input_1.setAttribute('pattern', '[a-zA-Z]{3,16}');
     input_1.toggleAttribute("autofocus", true);
-    contact_form_p_1.appendChild(label_1);
-    contact_form_p_1.appendChild(input_1);
 
     const contact_form_p_2 = document.createElement('p');
     const label_2 = document.createElement('label');
@@ -37,8 +35,6 @@ function contact() {
     input_2.setAttribute("name", "usermail");
     input_2.setAttribute('pattern', '[a-zA-Z0-9]{3,16}@(gmail)\.(com)');
     input_2.toggleAttribute('required', true);
-    contact_form_p_2.appendChild(label_2);
-    contact_form_p_2.appendChild(input_2);
 
     const contact_form_p_3 = document.createElement('p');
     const label_3 = document.createElement('label');
@@ -60,9 +56,6 @@ function contact() {
         charCount.textContent = `${currentChars} / ${maxChars}`;
     });
     charCount.textContent = `${currentChars} / ${maxChars}`;
-    contact_form_p_3.appendChild(label_3);
-    contact_form_p_3.appendChild(input_3);
-    contact_form_p_3.appendChild(charCount);
 
     //disabled for display purposes
     const submit_btn = document.createElement('button');
@@ -73,10 +66,14 @@ function contact() {
         e.preventDefault();
     });
 
-    contact_form.appendChild(contact_form_p_1);
-    contact_form.appendChild(contact_form_p_2);
-    contact_form.appendChild(contact_form_p_3);
+    [contact_form_p_1, contact_form_p_2, contact_form_p_3].forEach((item, index) => {
+        item.appendChild([label_1, label_2, label_3][index]);
+        item.appendChild([input_1, input_2, input_3][index]);
+        contact_form_p_3.appendChild(charCount);
+        contact_form.appendChild(item);
+    });
     contact_form.appendChild(submit_btn);
+
     contact_form_wrapper.appendChild(contact_form_title);
     contact_form_wrapper.appendChild(contact_form);
     // contact form end
@@ -90,35 +87,25 @@ function contact() {
     const contact_socials_icons = document.createElement('div');
     contact_socials_icons.classList.add('contact-socials-icons');
     const instagram_icon = document.createElement('span');
-    instagram_icon.classList.add('fa-brands');
     instagram_icon.classList.add('fa-instagram');
     const facebook_icon = document.createElement('span');
-    facebook_icon.classList.add('fa-brands');
     facebook_icon.classList.add('fa-facebook');
     const snapchat_icon = document.createElement('span');
-    snapchat_icon.classList.add('fa-brands');
     snapchat_icon.classList.add('fa-snapchat');
     const twitter_icon = document.createElement('span');
-    twitter_icon.classList.add('fa-brands');
     twitter_icon.classList.add('fa-twitter');
     const tiktok_icon = document.createElement('span');
-    tiktok_icon.classList.add('fa-brands');
     tiktok_icon.classList.add('fa-tiktok');
     const whatsapp_icon = document.createElement('span');
-    whatsapp_icon.classList.add('fa-brands');
     whatsapp_icon.classList.add('fa-whatsapp');
     const pinterest_icon = document.createElement('span');
-    pinterest_icon.classList.add('fa-brands');
     pinterest_icon.classList.add('fa-pinterest');
 
+    [instagram_icon, facebook_icon, snapchat_icon, twitter_icon, tiktok_icon, whatsapp_icon, pinterest_icon].forEach(item => {
+        item.classList.add('fa-brands');
+        contact_socials_icons.appendChild(item);
+    })
     contact_socials_wrapper.appendChild(contact_socials_title);
-    contact_socials_icons.appendChild(instagram_icon);
-    contact_socials_icons.appendChild(facebook_icon);
-    contact_socials_icons.appendChild(snapchat_icon);
-    contact_socials_icons.appendChild(twitter_icon);
-    contact_socials_icons.appendChild(tiktok_icon);
-    contact_socials_icons.appendChild(whatsapp_icon);
-    contact_socials_icons.appendChild(pinterest_icon);
     contact_socials_wrapper.appendChild(contact_socials_icons);
     // contact social end
 
@@ -141,14 +128,10 @@ function contact() {
     map.setAttribute('loading', 'lazy');
     map.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
     map_wrapper.appendChild(map);
-    contact_map_wrapper.appendChild(contact_map_title);
-    contact_map_wrapper.appendChild(contact_map_p);
-    contact_map_wrapper.appendChild(map_wrapper);
+    [contact_map_title, contact_map_p, map_wrapper].forEach(item => contact_map_wrapper.appendChild(item));
     // contact map end
 
-    contactWrapper.appendChild(contact_form_wrapper);
-    contactWrapper.appendChild(contact_socials_wrapper);
-    contactWrapper.appendChild(contact_map_wrapper);
+    [contact_form_wrapper, contact_socials_wrapper, contact_map_wrapper].forEach(item => contactWrapper.appendChild(item));
 
     const contentBox = document.getElementById('contentBox');
     contentBox.appendChild(contactWrapper);

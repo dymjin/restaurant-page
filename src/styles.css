@@ -176,19 +176,10 @@ html {
     padding: 2rem;
 }
 
-.menu-img-1 {
+.menu-img {
     width: 700px;
     height: auto;
-}
-
-.menu-img-2 {
-    width: 700px;
-    height: auto;
-}
-
-.menu-img-3 {
-    width: 700px;
-    height: auto;
+    
 }
 
 .text-wrapper {
@@ -381,6 +372,7 @@ label[for="message"]::after {
     align-self: center;
 }
 
+/* https://blog.hubspot.com/website/how-to-embed-google-map-in-html */
 .google-map {
     padding-bottom: 50%;
     position: relative;

@@ -1,11 +1,14 @@
-import { pageLoad } from "./pageLoad";
-import * as barrel from './barrel';
+import { pageLoad, barrel } from "./pageLoad";
 
 const funcList = [barrel.addHome, barrel.addMenu, barrel.addContact];
 pageLoad();
+
 const tabs = document.querySelectorAll('.tabs>div');
 tabs.forEach((tab, index) => {
     tab.addEventListener('click', () => {
+        if (tab === document.querySelector('.selected-tab')) {
+            return;
+        }
         while (contentBox.firstChild) {
             contentBox.removeChild(contentBox.firstChild);
         }
