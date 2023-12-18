@@ -1,1 +1,1 @@
-# restaurant-page
+Restaurant page project. Tests knowledge of modules and how they interact. First project to use webpack as well. Logo by me, fonts on google, icons on fontawesome, images from Pixabay.
