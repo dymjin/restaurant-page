@@ -22,7 +22,7 @@ body {
 }
 
 html {
-    background: center / cover no-repeat fixed url(../imgs/wood_wall.jpg);
+    background: center / cover no-repeat fixed url(../src/wood_wall.jpg);
     font-family: 'Rethink Sans', sans-serif;
 }
 

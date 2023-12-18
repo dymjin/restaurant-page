@@ -14,7 +14,7 @@ const pageLoad = () => {
     mainLogo.textContent = "Queen's Cottage";
     mainLogo.classList.add('main-logo');
     const woodOven = document.createElement('img');
-    woodOven.setAttribute('src', '../imgs/wood_oven_final.svg');
+    woodOven.setAttribute('src', '../src/wood_oven_final.svg');
     woodOven.classList.add('wood-oven');
     header.appendChild(woodOven);
     header.appendChild(mainLogo);
